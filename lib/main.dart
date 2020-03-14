@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: new AppBar(
         elevation: 0.1,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         title: Text('Shopping App'),
         actions: <Widget>[
           new IconButton(
