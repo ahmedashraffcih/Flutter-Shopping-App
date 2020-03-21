@@ -53,13 +53,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 //            body
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('Home Page'),
-                leading: Icon(Icons.home),
-              ),
-            ),
+            Reuseable_Inkwell(),
 
             InkWell(
               onTap: (){},
@@ -104,6 +98,23 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class Reuseable_Inkwell extends StatelessWidget {
+  const Reuseable_Inkwell({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: (){},
+      child: ListTile(
+        title: Text('Home Page'),
+        leading: Icon(Icons.home),
       ),
     );
   }
