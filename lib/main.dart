@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Reuseable_Inkwell.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -53,49 +54,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 //            body
-            Reuseable_Inkwell(),
-
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('My account'),
-                leading: Icon(Icons.person),
-              ),
-            ),
-
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket),
-              ),
-            ),
-
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('Categoris'),
-                leading: Icon(Icons.dashboard),
-              ),
-            ),
-
-            Divider(),
-
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('Settings'),
-                leading: Icon(Icons.settings, color: Colors.blue,),
-              ),
-            ),
-
-            InkWell(
-              onTap: (){},
-              child: ListTile(
-                title: Text('About'),
-                leading: Icon(Icons.help, color: Colors.green),
-              ),
-            ),
+            Reuseable_Inkwell(InkTitle: 'Home Page',icon: Icons.home,),
+            Reuseable_Inkwell(InkTitle: 'My account',icon: Icons.person,),
+            Reuseable_Inkwell(InkTitle: 'My Orders',icon: Icons.shopping_basket,),
+            Reuseable_Inkwell(InkTitle: 'Categoris',icon: Icons.dashboard,),
+            Reuseable_Inkwell(InkTitle: 'Settings',icon: Icons.settings,),
+            Reuseable_Inkwell(InkTitle: 'About',icon: Icons.help,),
           ],
         ),
       ),
@@ -103,19 +67,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class Reuseable_Inkwell extends StatelessWidget {
-  const Reuseable_Inkwell({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: (){},
-      child: ListTile(
-        title: Text('Home Page'),
-        leading: Icon(Icons.home),
-      ),
-    );
-  }
-}
