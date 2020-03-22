@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class Reuseable_Inkwell extends StatelessWidget {
 
-  Reuseable_Inkwell({this.InkTitle,this.OnPress,this.icon});
+  Reuseable_Inkwell({this.InkTitle,this.OnPress,this.icon,this.iconColor});
 
   final String InkTitle;
   final Function OnPress;
   final IconData icon;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Reuseable_Inkwell extends StatelessWidget {
       onTap: OnPress,
       child: ListTile(
         title: Text(InkTitle),
-        leading: Icon(icon),
+        leading: Icon(icon,color:iconColor,),
       ),
     );
   }
