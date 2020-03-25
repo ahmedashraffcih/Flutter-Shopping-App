@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'Reuseable_Inkwell.dart';
+import 'package:flutter_shopping_app/Carousel.dart';
 import 'package:flutter_shopping_app/Icon_Buttons.dart';
 import 'Constants.dart';
+import 'Horizontal_List_View.dart';
+import 'Products.dart';
+import 'Reuseable_Inkwell.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -60,9 +63,7 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 //Box holding first section (User Data)
-                decoration: new BoxDecoration(
-                  color: KBoxColor,
-                ),
+                decoration: KDrawerBoxDecoration,
               ),
 
               //Drawer Body
@@ -95,6 +96,26 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
+      body: new ListView(
+        children: <Widget>[
+          //Carousel
+          image_carousel,
+          //Padding Widget
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('Categories'),
+          ),
+          //View List 'Categories'
+          H_List(),
+
+          //Products
+          Container(
+            margin: EdgeInsets.all(20.0),
+            height: 320.0,
+            child: Products(),
+          )
+        ],
+      ),
     );
   }
 }
