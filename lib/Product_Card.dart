@@ -15,10 +15,15 @@ class Single_Product extends StatelessWidget {
           child: Material(
             child: InkWell(
               onTap: ()=>Navigator.of(context).push(
-                  MaterialPageRoute(builder:(context) => new ProductDetails())),
+                  MaterialPageRoute(builder:(context) => new ProductDetails(
+                    //Here we are passing product values to product details page
+                    productDetailName: product_name,
+                    productDetailPicture: product_pic,
+                    productDetailPrice: product_price,
+                  ))),
               child: GridTile(
                 footer: Container(
-                  color: KPrimaryDarkColor,
+                  decoration: KProductCardDecoration,
                   child: ListTile(
                     leading: Text(product_name,style: KProductNameTextStyle,),
                     title: Text('\$$product_price',style: KProductPriceTextStyle,),
@@ -27,7 +32,8 @@ class Single_Product extends StatelessWidget {
                 child: Image.asset(product_pic,fit: BoxFit.cover,),
               ),
             ),
-          )),
+          ),
+      ),
     );
   }
 }

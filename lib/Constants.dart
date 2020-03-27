@@ -32,4 +32,19 @@ const KDrawerBoxDecoration = BoxDecoration(
           4.0,
         ),
       )
-    ]);
+    ]
+);
+const KProductCardDecoration = BoxDecoration(
+    color: KBoxColor,
+    boxShadow: [
+      BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.10),
+        blurRadius: 4.0,
+        spreadRadius: 1.0,
+        offset: Offset(
+          0,
+          4.0,
+        ),
+      )
+    ]
+);
