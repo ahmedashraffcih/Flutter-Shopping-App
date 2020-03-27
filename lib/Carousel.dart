@@ -6,11 +6,11 @@ import 'package:flutter_shopping_app/Constants.dart';
     child:  new Carousel(
       boxFit: BoxFit.cover,
       images: [
-        AssetImage('images/w3.jpeg'),
-        AssetImage('images/m1.jpeg'),
-        AssetImage('images/c1.jpg'),
-        AssetImage('images/w4.jpeg'),
-        AssetImage('images/m2.jpg'),
+        AssetImage('images/Carsuol1.jpg'),
+        AssetImage('images/Carsuol1.jpg'),
+        AssetImage('images/Carsuol1.jpg'),
+        AssetImage('images/Carsuol1.jpg'),
+        AssetImage('images/Carsuol1.jpg'),
       ],
       autoplay: true,
       //showIndicator: false,

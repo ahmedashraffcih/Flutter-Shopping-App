@@ -5,19 +5,61 @@ const KSubDarkColor = Color(0xFF065471);
 const KBoxColor = Color(0xFF0a91ab);
 const KPrimaryBrightColor = Color(0xFFffc045);
 
+
+// --------------- HOME PAGE CONSTANTS ----------
 const KCategoryTextStyle = TextStyle(
     fontSize: 15.0, fontWeight: FontWeight.bold, color: Color(0xFFffc045));
 
 const KProductNameTextStyle = TextStyle(
   fontSize: 20.0,
   fontWeight: FontWeight.bold,
-  color: Color(0xFFffc045),
+  color: KPrimaryBrightColor,
 );
 
 const KProductPriceTextStyle = TextStyle(
-  color: Color(0xFFffc045),
+  color: KPrimaryBrightColor,
   fontWeight: FontWeight.w900,
 );
+
+const KProductCardDecoration = BoxDecoration(
+    color: KBoxColor,
+    boxShadow: [
+      BoxShadow(
+        color: Color.fromRGBO(0, 0, 0, 0.10),
+        blurRadius: 4.0,
+        spreadRadius: 1.0,
+        offset: Offset(
+          0,
+          4.0,
+        ),
+      )
+    ]
+);
+
+
+
+// --------------- PRODUCT DESCRIPTION CONSTANTS ----------
+
+const KProductDetailsNameTextStyle = TextStyle(
+  fontSize: 25.0,
+  fontWeight: FontWeight.bold,
+  color: KPrimaryBrightColor,
+);
+
+const KProductDetailsPriceTextStyle = TextStyle(
+  color: KPrimaryBrightColor,
+  fontSize: 20.0
+);
+
+const KProductDescriptionTitleTextStyle = TextStyle(
+  color: KBoxColor,
+  fontWeight: FontWeight.w500,
+);
+const KProductDescriptionTextStyle = TextStyle(
+  color: KBoxColor,
+);
+
+// --------------- DRAWER CONSTANTS ----------
 
 const KDrawerBoxDecoration = BoxDecoration(
     color: KBoxColor,
@@ -32,4 +74,6 @@ const KDrawerBoxDecoration = BoxDecoration(
           4.0,
         ),
       )
-    ]);
+    ]
+);
+
