@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Constants.dart';
-import 'package:flutter_shopping_app/Icon_Buttons.dart';
-import 'package:flutter_shopping_app/Product_Details_Button.dart';
-import 'App_Bar.dart';
+import 'package:flutter_shopping_app/Components/Constants.dart';
+import 'package:flutter_shopping_app/Components/Icon_Buttons.dart';
+import 'package:flutter_shopping_app/Components/Product_Details_Button.dart';
+import '../Components/App_Bar.dart';
 
 class ProductDetails extends StatefulWidget {
   ProductDetails(

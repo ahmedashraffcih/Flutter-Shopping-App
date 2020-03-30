@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Constants.dart';
+import 'package:flutter_shopping_app/Components/Constants.dart';
 
 class Product_Details_Button extends StatelessWidget {
   Product_Details_Button({@required this.textButton,@required this.buttonContent});

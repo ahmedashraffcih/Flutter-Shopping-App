@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'App_Bar.dart';
-import 'package:flutter_shopping_app/Constants.dart';
+import '../Components/App_Bar.dart';
+import 'package:flutter_shopping_app/Components/Constants.dart';
+import '../Components/Shopping_Cart/Cart_Products.dart';
+
 
 class ShoppingCart extends StatefulWidget {
   @override
@@ -17,6 +19,10 @@ class _ShoppingCartState extends State<ShoppingCart> {
         appThemedata: IconThemeData(color: KPrimaryBrightColor),
         pressButton1: () {},
       ),
+
+      body: CartProducts(),
+
+      // Check Out
       bottomNavigationBar: Container(
         color: KBoxColor,
         child: Row(

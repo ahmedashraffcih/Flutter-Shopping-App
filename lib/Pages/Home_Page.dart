@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Carousel.dart';
-import 'Constants.dart';
-import 'Horizontal_List_View.dart';
-import 'Products.dart';
-import 'Reuseable_Inkwell.dart';
-import 'App_Bar.dart';
+import 'package:flutter_shopping_app/Components/Carousel.dart';
+import '../Components/Constants.dart';
+import '../Components/Horizontal_List_View.dart';
+import '../Components/Products.dart';
+import '../Components/Reuseable_Inkwell.dart';
+import '../Components/App_Bar.dart';
 import 'Shopping_Cart.dart';
 
 class HomePage extends StatefulWidget {

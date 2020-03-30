@@ -5,7 +5,6 @@ const KSubDarkColor = Color(0xFF065471);
 const KBoxColor = Color(0xFF0a91ab);
 const KPrimaryBrightColor = Color(0xFFffc045);
 
-
 // --------------- HOME PAGE CONSTANTS ----------
 const KCategoryTextStyle = TextStyle(
     fontSize: 15.0, fontWeight: FontWeight.bold, color: Color(0xFFffc045));
@@ -21,22 +20,17 @@ const KProductPriceTextStyle = TextStyle(
   fontWeight: FontWeight.w900,
 );
 
-const KProductCardDecoration = BoxDecoration(
-    color: KBoxColor,
-    boxShadow: [
-      BoxShadow(
-        color: Color.fromRGBO(0, 0, 0, 0.10),
-        blurRadius: 4.0,
-        spreadRadius: 1.0,
-        offset: Offset(
-          0,
-          4.0,
-        ),
-      )
-    ]
-);
-
-
+const KProductCardDecoration = BoxDecoration(color: KBoxColor, boxShadow: [
+  BoxShadow(
+    color: Color.fromRGBO(0, 0, 0, 0.10),
+    blurRadius: 4.0,
+    spreadRadius: 1.0,
+    offset: Offset(
+      0,
+      4.0,
+    ),
+  )
+]);
 
 // --------------- PRODUCT DESCRIPTION CONSTANTS ----------
 
@@ -46,10 +40,8 @@ const KProductDetailsNameTextStyle = TextStyle(
   color: KPrimaryBrightColor,
 );
 
-const KProductDetailsPriceTextStyle = TextStyle(
-  color: KPrimaryBrightColor,
-  fontSize: 20.0
-);
+const KProductDetailsPriceTextStyle =
+    TextStyle(color: KPrimaryBrightColor, fontSize: 20.0);
 
 const KProductDescriptionTitleTextStyle = TextStyle(
   color: KBoxColor,
@@ -74,6 +66,8 @@ const KDrawerBoxDecoration = BoxDecoration(
           4.0,
         ),
       )
-    ]
-);
+    ]);
 
+// --------------- Shopping cart CONSTANTS ----------
+const KCartCountTextStyle = TextStyle(
+    color: KPrimaryDarkColor, fontWeight: FontWeight.w800, fontSize: 20);
