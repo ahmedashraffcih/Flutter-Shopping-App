@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Constants.dart';
-import 'Product_Details.dart';
+import 'package:flutter_shopping_app/Components/Constants.dart';
+import '../Pages/Product_Details.dart';
 class Single_Product extends StatelessWidget {
   Single_Product({this.product_name, this.product_pic, this.product_price});
   final product_name;

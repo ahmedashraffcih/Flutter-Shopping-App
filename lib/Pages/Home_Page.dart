@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Carousel.dart';
-import 'package:flutter_shopping_app/Icon_Buttons.dart';
-import 'Constants.dart';
-import 'Horizontal_List_View.dart';
-import 'Products.dart';
-import 'Reuseable_Inkwell.dart';
+import 'package:flutter_shopping_app/Components/Carousel.dart';
+import '../Components/Constants.dart';
+import '../Components/Horizontal_List_View.dart';
+import '../Components/Products.dart';
+import '../Components/Reuseable_Inkwell.dart';
+import '../Components/App_Bar.dart';
+import 'Shopping_Cart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,29 +16,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       //APPLICATION BAR
-      appBar: new AppBar(
-        //This Style for the Drawer Icon
-        //any Variable 'K' which if for constants.dart
-        iconTheme: new IconThemeData(color: KPrimaryBrightColor),
-
-        //Bar Dropshadow
-        elevation: 0.1,
-        title: Text('Shopping App'),
-
-        actions: <Widget>[
-          //Search
-          Icon_Buttons(
-            icon: Icons.search,
-            Button_color: KPrimaryBrightColor,
-          ),
-          //Chart
-          Icon_Buttons(
-            icon: Icons.shopping_cart,
-            Button_color: KPrimaryBrightColor,
-          )
-        ],
-      ),
+    appBar: ShoppingAppBar(
+      title: Text('Shopping App'),
+      icon1: Icons.search,
+      icon2: Icons.shopping_cart,
+      appThemedata: IconThemeData(color: KPrimaryBrightColor),
+      pressButton1: (){},
+      pressButton2: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> new ShoppingCart()));
+      },
+    ),
 
       //Drawer or Side Bar
       drawer: new Drawer(
@@ -119,3 +109,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+

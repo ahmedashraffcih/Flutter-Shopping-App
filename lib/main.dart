@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Home_Page.dart';
-import 'Constants.dart';
+import 'Pages/Home_Page.dart';
+import 'Components/Constants.dart';
 //s
 void main() => runApp(Ecommerce());
 

@@ -8,7 +8,7 @@ class Icon_Buttons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new IconButton(
+    return IconButton(
         icon: Icon(
           icon,
           color: Button_color,
