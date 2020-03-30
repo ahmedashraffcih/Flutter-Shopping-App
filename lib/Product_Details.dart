@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shopping_app/Constants.dart';
 import 'package:flutter_shopping_app/Icon_Buttons.dart';
 import 'package:flutter_shopping_app/Product_Details_Button.dart';
+import 'App_Bar.dart';
 
 class ProductDetails extends StatefulWidget {
   ProductDetails(
@@ -20,28 +21,14 @@ class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: new AppBar(
-        //This Style for the Drawer Icon
-        //any Variable 'K' which if for constants.dart
-        iconTheme: new IconThemeData(color: KPrimaryBrightColor),
-
-        //Bar Dropshadow
-        elevation: 0.1,
+      appBar: ShoppingAppBar(
         title: Text('Shopping App'),
-
-        actions: <Widget>[
-          //Search
-          Icon_Buttons(
-            icon: Icons.search,
-            Button_color: KPrimaryBrightColor,
-          ),
-          //Chart
-          Icon_Buttons(
-            icon: Icons.shopping_cart,
-            Button_color: KPrimaryBrightColor,
-          )
-        ],
+        icon1: Icons.search,
+        icon2: Icons.shopping_cart,
+        appThemedata: IconThemeData(color: KPrimaryBrightColor),
+        pressButton1: (){},
       ),
+
       body: new ListView(
         children: <Widget>[
           // Product Picture
