@@ -14,12 +14,12 @@ class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: 
-       ShoppingAppBar(
+      appBar:
+      ShoppingAppBar(
         title: Text('Shopping App'),
         appThemedata: IconThemeData(color: KPrimaryBrightColor),
-       ),
-///****************************************************************************/      
+      ),
+      ///****************************************************************************/
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -28,10 +28,10 @@ class _LogInState extends State<LogIn> {
 
           //Email Textfield.
           Textfield(label: 'Email', hint: 'Enter your email', icon: Icons.email, hideText: false,),
-///****************************************************************************/          
+          ///****************************************************************************/
           //Password Textfield.
           Textfield(label: 'Password', hint: 'Enter your password', icon: Icons.vpn_key, hideText: true),
-///****************************************************************************/          
+          ///****************************************************************************/
           //Log In button ButtonBar.
           ButtonBar(
             buttonMinWidth: 130,
@@ -57,32 +57,32 @@ class _LogInState extends State<LogIn> {
               ),
             ],
           ),
-///****************************************************************************/          
+          ///****************************************************************************/
           Container(
             margin: EdgeInsets.only(top: 5,left: 35),
             child: Row(
-            children: <Widget>[
-              Text("If you don't have account press",
-           style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-           ),
-          ),
+              children: <Widget>[
+                Text("If you don't have account press",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
 
-          FlatButton(
-            padding: EdgeInsets.all(0),
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
-            }, 
-            child: Text('Sign Up',
-             style: TextStyle(
-             color: Colors.white,
-             fontSize: 16,
+                FlatButton(
+                  padding: EdgeInsets.all(0),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+                  },
+                  child: Text('Sign Up',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
-           ),
-          ),
-            ],
-          ),
           ),
         ],
       ),

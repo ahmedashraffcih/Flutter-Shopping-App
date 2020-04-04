@@ -16,27 +16,27 @@ class _DefultHomePageState extends State<DefultHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: 
+      appBar:
       ShoppingAppBar(
-       title: Text('                  Shopping App'),
-       icon2: Icons.person_add,
-       appThemedata: IconThemeData(color: KPrimaryBrightColor),
-       pressButton2: (){
-         Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
-       },
+        title: Text('                  Shopping App'),
+        icon2: Icons.person_add,
+        appThemedata: IconThemeData(color: KPrimaryBrightColor),
+        pressButton2: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+        },
       ),
-///****************************************************************************/
+      ///****************************************************************************/
       body: ListView(
         children: <Widget>[
-           image_carousel,
-           H_List(),
+          image_carousel,
+          H_List(),
 
-           Container(
+          Container(
             margin: EdgeInsets.all(20.0),
             height: 320.0,
             child: Products(),
           ),
-///****************************************************************************/          
+          ///****************************************************************************/
         ],
       ),
     );

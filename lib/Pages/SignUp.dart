@@ -14,12 +14,12 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: 
+      appBar:
       ShoppingAppBar(
         title: Text('Shopping App'),
         appThemedata: IconThemeData(color: KPrimaryBrightColor),
-       ),
-///****************************************************************************/       
+      ),
+      ///****************************************************************************/
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -28,10 +28,10 @@ class _SignUpState extends State<SignUp> {
 
           //Email Textfield.
           Textfield(label: 'Email', hint: 'Enter your email', icon: Icons.email, hideText: false,),
-///****************************************************************************/          
+          ///****************************************************************************/
           //Password Textfield.
           Textfield(label: 'Password', hint: 'Enter your password', icon: Icons.vpn_key, hideText: true),
-///****************************************************************************/          
+          ///****************************************************************************/
           //Confirm Password Textfield.
           Textfield(label: 'Confirm Password', hint: 'Confirm your password', icon: Icons.vpn_key, hideText: true),
           //Log In button ButtonBar.
@@ -59,32 +59,32 @@ class _SignUpState extends State<SignUp> {
               ),
             ],
           ),
-///****************************************************************************/          
+          ///****************************************************************************/
           Container(
             margin: EdgeInsets.only(top: 5,left: 35),
             child: Row(
-            children: <Widget>[
-              Text("If you already have account press",
-           style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-           ),
-          ),
+              children: <Widget>[
+                Text("If you already have account press",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
 
-          FlatButton(
-            padding: EdgeInsets.all(0),
-            onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> LogIn()));
-            }, 
-            child: Text('Log In',
-             style: TextStyle(
-             color: Colors.white,
-             fontSize: 16,
+                FlatButton(
+                  padding: EdgeInsets.all(0),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LogIn()));
+                  },
+                  child: Text('Log In',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
-           ),
-          ),
-            ],
-          ),
           ),
         ],
       ),
