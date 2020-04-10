@@ -4,6 +4,7 @@ import '../Components/App_Bar.dart';
 import '../Components/Horizontal_List_View.dart';
 import '../Components/Products.dart';
 import '../Components/Carousel.dart';
+import '../Components/Page_Routing_Animation.dart';
 import './SignUp.dart';
 
 
@@ -22,7 +23,7 @@ class _DefultHomePageState extends State<DefultHomePage> {
         icon2: Icons.person_add,
         appThemedata: IconThemeData(color: KPrimaryBrightColor),
         pressButton2: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUp()));
+          Navigator.of(context).push(Router().router(SignUp()));
         },
       ),
       ///****************************************************************************/

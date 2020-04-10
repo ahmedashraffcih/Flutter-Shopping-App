@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../Components/Constants.dart';
 import '../Components/App_Bar.dart';
+import '../Components/FlushBar.dart';
+import '../Components/Page_Routing_Animation.dart';
 import './Home_Page.dart';
 import '../Components/TextFields.dart';
 import './LogIn.dart';
@@ -27,13 +29,16 @@ class _SignUpState extends State<SignUp> {
           ),
 
           //Email Textfield.
-          Textfield(label: 'Email', hint: 'Enter your email', icon: Icons.email, hideText: false,),
+          Textfield(label: 'Email', hint: 'Enter your email', icon: Icons.email, hideText: false,email: true,
+          controller: email,),
           ///****************************************************************************/
           //Password Textfield.
-          Textfield(label: 'Password', hint: 'Enter your password', icon: Icons.vpn_key, hideText: true),
+          Textfield(label: 'Password', hint: 'Enter your password', icon: Icons.vpn_key, hideText: true,email: false,
+          controller: password,),
           ///****************************************************************************/
           //Confirm Password Textfield.
-          Textfield(label: 'Confirm Password', hint: 'Confirm your password', icon: Icons.vpn_key, hideText: true),
+          Textfield(label: 'Confirm Password', hint: 'Confirm your password', icon: Icons.vpn_key, hideText: true,email: false,
+          controller: confirmpassword,),
           //Log In button ButtonBar.
           ButtonBar(
             buttonMinWidth: 130,
@@ -41,9 +46,7 @@ class _SignUpState extends State<SignUp> {
               Container(
                 margin: EdgeInsets.only(right:98),
                 child: RaisedButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> new HomePage()));
-                  },
+                  onPressed: signUpaction,
                   child: Text('Sign Up',
                     style: TextStyle(
                       fontSize: 16,
@@ -74,7 +77,7 @@ class _SignUpState extends State<SignUp> {
                 FlatButton(
                   padding: EdgeInsets.all(0),
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LogIn()));
+                    Navigator.of(context).push(Router().router(LogIn()));
                   },
                   child: Text('Log In',
                     style: TextStyle(
@@ -89,5 +92,54 @@ class _SignUpState extends State<SignUp> {
         ],
       ),
     );
+  }
+
+  //Textediting controllers to get data from textfields
+  final email = TextEditingController();
+  final password = TextEditingController();
+  final confirmpassword = TextEditingController();
+///**********************************************************************
+  
+  //Method disposeEmail to remove the email controller from tree.
+  void disposeEmail()
+  {
+    email.dispose();
+    super.dispose();
+  }
+///**********************************************************************
+  
+  //Method disposePassword to remove the password controller from tree.
+  void disposePassword()
+  {
+    password.dispose();
+    super.dispose();
+  }
+///**********************************************************************
+  
+ //Method disposePassword to remove the password controller from tree.
+  void disposeconfirmPassword()
+  {
+    confirmpassword.dispose();
+    super.dispose();
+  }
+///**********************************************************************  
+  void signUpaction()
+  {
+    if (email.text.isEmpty || !email.text.contains('@')) 
+    {
+      Warning().warningMessage(context, title: 'Email field error !', message: 'Please enter vaild email.');
+    }
+    else if(password.text.isEmpty) 
+    {
+      Warning().warningMessage(context, title: "Password field can't be empty !", message: "Please enter your password");
+    }
+    else if(confirmpassword.text.isEmpty) 
+    {
+      Warning().warningMessage(context, title: "Confirm Password field can't be empty !", message: "Please cofirm your password");
+    }
+    else
+    {
+      Navigator.of(context).push(Router().router(HomePage()));
+    }
   }
 }
