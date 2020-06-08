@@ -64,7 +64,14 @@ class _SingleCartProductState extends State<SingleCartProduct> {
                 iconColor: KPrimaryBrightColor,
                 onPressed: () {
                   setState(() {
-                    widget.count--;
+                    if(widget.count >=1)
+                      {
+                        widget.count--;
+                      }
+                    else
+                      {
+                        widget.count=0;
+                      }
                   });
                 },
               ),
