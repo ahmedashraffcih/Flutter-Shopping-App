@@ -1,38 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shopping_app/Components/Constants.dart';
 import '../Raw_Material Button.dart';
-/*
-class LogIn extends StatefulWidget {
-  @override
-  _LogInState createState() => _LogInState();
-}
-Container(
-            margin: EdgeInsets.only(top: 5,left: 35),
-            child: Row(
-              children: <Widget>[
-                Text("If you already have account press",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
 
-                FlatButton(
-                  padding: EdgeInsets.all(0),
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LogIn()));
-                  },
-                  child: Text('Log In',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-*/
 class SingleCartProduct extends StatefulWidget {
   int count = 0;
   SingleCartProduct(
