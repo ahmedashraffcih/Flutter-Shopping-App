@@ -7,10 +7,9 @@ import 'package:flutter_shopping_app/Components/Constants.dart';
       boxFit: BoxFit.cover,
       images: [
         AssetImage('images/Carsuol1.jpg'),
-        AssetImage('images/Carsuol1.jpg'),
-        AssetImage('images/Carsuol1.jpg'),
-        AssetImage('images/Carsuol1.jpg'),
-        AssetImage('images/Carsuol1.jpg'),
+        AssetImage('images/Carsuol3.jpg'),
+        AssetImage('images/Carsuol2.jpg'),
+        AssetImage('images/Carsuol4.jpg'),
       ],
       autoplay: true,
       //showIndicator: false,
