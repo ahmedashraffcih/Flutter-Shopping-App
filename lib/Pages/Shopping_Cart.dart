@@ -30,7 +30,7 @@ class _ShoppingCartState extends State<ShoppingCart> {
             Expanded(
               child: ListTile(
                 title: Text('Total Amount'),
-                subtitle: Text('230'),
+                subtitle: Text('40'),
               ),
             ),
             Expanded(
